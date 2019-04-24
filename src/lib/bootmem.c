@@ -160,7 +160,7 @@ void bootmem_dump_ranges(void)
 
 	i = 0;
 	memranges_each_entry(r, &bootmem) {
-		printk(BIOS_DEBUG, "%2d. %016llx-%016llx: %s\n",
+		printk(BIOS_DEBUG, "%2d. %016llx-%016llx: %p\n",
 			i, range_entry_base(r), range_entry_end(r) - 1,
 			bootmem_range_string(range_entry_tag(r)));
 		i++;
